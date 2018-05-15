@@ -1,0 +1,12 @@
+{
+  "name": "mongoose-schema-paths-getter",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= 6"
+  },
+  "description": "A mongoose plugin to get the paths of a schema",
+  "main": "index.js",
+  "author": "kitce",
+  "license": "MIT",
+  "repository": "github:kitce/mongoose-schema-paths-getter"
+}
