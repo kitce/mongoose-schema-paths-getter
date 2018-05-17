@@ -1,13 +1,12 @@
 ## Installation
-```
-# npm
-npm install mongoose-schema-paths-getter --save
 
-# yarn
-yarn add mongoose-schema-paths-getter
-```
+#### npm
+`npm install mongoose-schema-paths-getter --save`
+#### yarn
+`yarn add mongoose-schema-paths-getter`
 
 ## Usage
+
 ```
 const schemaPathsGetter = require('mongoose-schema-paths-getter');
 const BookSchema = new mongoose.Schema({
@@ -24,13 +23,14 @@ book.paths(); // => ['title', 'author', 'ISBN', 'price'] *** order is not guaran
 ```
 
 ## Options
+
 ### `exclude` (`Array<String>`/`String`)
 Exclude the unwanted paths
 ```
 BookSchema.plugin(schemaPathsGetter, {
   exclude : ['ISBN'] // or just 'ISBN'
 });
-book.paths(); // => ['title', 'author', 'price']
+book.getPaths(); // => ['title', 'author', 'price']
 ```
 
 ### `method` (`String`)
