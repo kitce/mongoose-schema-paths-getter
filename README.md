@@ -7,7 +7,7 @@
 
 ## Usage
 
-```
+```js
 const schemaPathsGetter = require('mongoose-schema-paths-getter');
 const BookSchema = new mongoose.Schema({
   title : String,
@@ -18,7 +18,7 @@ const BookSchema = new mongoose.Schema({
 BookSchema.plugin(schemaPathsGetter);
 const Book = mongoose.model('Book', BookSchema);
 
-const book = new Book({...});
+const book = new Book({/* book data */});
 book.getPaths(); // => ['title', 'author', 'ISBN', 'price'] *** order is not guaranteed ***
 ```
 
@@ -26,7 +26,7 @@ book.getPaths(); // => ['title', 'author', 'ISBN', 'price'] *** order is not gua
 
 ### `exclude` (`Array<String>`/`String`)
 Exclude the unwanted paths
-```
+```js
 BookSchema.plugin(schemaPathsGetter, {
   exclude : ['ISBN'] // or just 'ISBN'
 });
@@ -37,7 +37,7 @@ book.getPaths(); // => ['title', 'author', 'price']
 default : `getPaths`
 
 Specify the method name
-```
+```js
 BookSchema.plugin(schemaPathsGetter, {
   method : 'getProperties'
 });
