@@ -19,7 +19,7 @@ BookSchema.plugin(schemaPathsGetter);
 const Book = mongoose.model('Book', BookSchema);
 
 const book = new Book({...});
-book.paths(); // => ['title', 'author', 'ISBN', 'price'] *** order is not guaranteed ***
+book.getPaths(); // => ['title', 'author', 'ISBN', 'price'] *** order is not guaranteed ***
 ```
 
 ## Options
