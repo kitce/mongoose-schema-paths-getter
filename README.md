@@ -43,3 +43,10 @@ BookSchema.plugin(schemaPathsGetter, {
 });
 book.getProperties(); // => ['title', 'author', 'ISBN', 'price']
 ```
+
+## Test
+
+```
+yarn install
+yarn test
+```
